@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Lab 5 - Problema 3</title>
+</head>
+
+<body>
+    <h2>Lab 5 - Problema 3</h2>
+    <table class="centered">
+        <tr>
+            <td>
+
+                Introduzca la cantidad a convertir:
+                <div class="input-field inline">
+                    <input id="cantidadConvertir" type="email" class="validate">
+                    <label for="email_inline">Kg or Pounds</label>
+
+                </div>
+                <button class="btn waves-effect waves-light" type="Submit" name="action" onclick="convertidorLibraKilo()">Convertir
+                    <i class="material-icons right"></i>
+                  </button>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <p>Selecciona a que unidad convertir:</p>
+                <form action="#">
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" id="kilo" />
+                            <span>Kilo</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" id="libra"  />
+                            <span>Libra</span>
+                        </label>
+                    </p>
+
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a id="resultado">Unidad convertida: 0</a>
+
+
+            </td>
+         </tr>
+    </table>
+
+
+
+
+
+
+    
+    <script type="text/javascript" src="functions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

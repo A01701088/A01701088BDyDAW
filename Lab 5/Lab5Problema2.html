@@ -1,66 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Lab 5 - Problema 2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Lab 5 - Problema 2</title>
 </head>
+
 <body>
-    <h2>Lab 5 - Problema 2</h2>
-    
-    <div class="row">
-       
-            <table class="striped">
-                <thead>
-                  <tr>
-                      <th>Camara</th>
-                      <th>Coche</th>
-                      <th>Silla</th>
-                  </tr>
-                </thead>
-        
-                <tbody>
-                  <tr>
-                    <td><i class="material-icons">camera_alt</i></td>
-                    <td><i class="material-icons">directions_car</i></td>
-                    <td><i class="material-icons">event_seat</i></td>
-                  </tr>
-                  <tr>
-                    <th>$2000</th>
-                    <th>$10000</th>
-                    <th>$500</th>
-                </tr>
-                  
-                  <tr>
-                    <td><button class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons" onclick="tienda(1,0)">exposure_neg_1</i></button> <a id="cameraAmount">0</a> <button class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons" onclick="tienda(1,1)">exposure_plus_1</i></button></td>
-                    <td><button class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons" onclick="tienda(2,0)">exposure_neg_1</i></button> <a id="cocheAmount">0</a> <button class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons" onclick="tienda(2,1)">exposure_plus_1</i></button></td>
-                    <td><button class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons" onclick="tienda(3,0)">exposure_neg_1</i></button> <a id="sillaAmount">0</a> <button class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons" onclick="tienda(3,1)">exposure_plus_1</i></button></td>
-                  </tr>
-                  <tr>
-                    <td><a id="totalIVA">Total sin IVA:</a></td>
-                </tr>
-                  <tr>
-                      <td><a id="tax">IVA:</a></td>
-                  </tr>
-                  <tr>
-                    <td><a id="total">Total:</a></td>
-                  </tr>
+  <h2>Lab 5 - Problema 2</h2>
 
-                </tbody>
-              </table>
-            
+  <div class="row">
+
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>Camara</th>
+          <th>Coche</th>
+          <th>Silla</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><i class="material-icons">camera_alt</i></td>
+          <td><i class="material-icons">directions_car</i></td>
+          <td><i class="material-icons">event_seat</i></td>
+        </tr>
+        <tr>
+          <th>$2000</th>
+          <th>$10000</th>
+          <th>$500</th>
+        </tr>
+
+        <tr>
+          <td><button class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons"
+                onclick="tienda(1,0)">exposure_neg_1</i></button> <a id="cameraAmount">0</a> <button
+              class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons"
+                onclick="tienda(1,1)">exposure_plus_1</i></button></td>
+          <td><button class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons"
+                onclick="tienda(2,0)">exposure_neg_1</i></button> <a id="cocheAmount">0</a> <button
+              class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons"
+                onclick="tienda(2,1)">exposure_plus_1</i></button></td>
+          <td><button class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons"
+                onclick="tienda(3,0)">exposure_neg_1</i></button> <a id="sillaAmount">0</a> <button
+              class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons"
+                onclick="tienda(3,1)">exposure_plus_1</i></button></td>
+        </tr>
+        <tr>
+          <td><a id="totalIVA">Total sin IVA:</a></td>
+        </tr>
+        <tr>
+          <td><a id="tax">IVA:</a></td>
+        </tr>
+        <tr>
+          <td><a id="total">Total:</a></td>
+        </tr>
+
+
+      </tbody>
+
+    </table>
+
+    <button class="btn waves-effect waves-light" type="Submit" name="action" onclick="tienda(4,0)">Comprar
+      <i class="material-icons right"></i>
+    </button>
 
 
 
 
-    
-       
-    </div>
 
-    <script type="text/javascript" src="functions.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
+
+
+
+
+  </div>
+
+  <script type="text/javascript" src="functions.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
+
 </html>

@@ -85,10 +85,47 @@ function tienda(producto,operacion){
 
             }
         break;
-    }
-    document.getElementById("totalIVA").innerHTML="Total Sin Iva: " + total;
-    document.getElementById("tax").innerHTML="IVA: " + total*0.16;
-    document.getElementById("total").innerHTML="Total: "+ Math.floor(total*1.16);
+        case 4:
+            camara=0;
+            coche=0;
+            silla=0;
+            totalIVA=0;
+            total=0;
+            tax=0;
+            document.getElementById("sillaAmount").innerHTML=silla;
+            document.getElementById("cocheAmount").innerHTML=coche;
+            document.getElementById("cameraAmount").innerHTML=camara;
+            document.getElementById("totalIVA").innerHTML="Total Sin Iva: $" + total;
+            document.getElementById("tax").innerHTML="IVA: $" + total;
+            document.getElementById("total").innerHTML="Total: $"+ total;
 
+            alert("Gracias por su compra!");
+
+    }
+    document.getElementById("totalIVA").innerHTML="Total Sin Iva: $" + total;
+    document.getElementById("tax").innerHTML="IVA: $" + total*0.16;
+    document.getElementById("total").innerHTML="Total: $"+ Math.floor(total*1.16);
+
+
+}
+
+
+function convertidorLibraKilo(){
+    
+    let cantidad = document.getElementById("cantidadConvertir").value;
+
+
+    if(document.getElementById("libra").checked){
+        cantidad = cantidad*2.204;
+        document.getElementById("resultado").innerHTML = cantidad + "lb"
+    }
+    else if(document.getElementById("kilo").checked){
+        cantidad=cantidad*0.45392;
+        document.getElementById("resultado").innerHTML = cantidad + "kg"
+    }
+
+    console.log(cantidad);
+    console.log(document.getElementById("kilo").checked)
+    console.log(document.getElementById("libra").checked)
 
 }
