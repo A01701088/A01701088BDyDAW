@@ -20,7 +20,8 @@
 
                     <span id="v0">Introduzca la cantidad a convertir:</span>
                     <div class="input-field inline">
-                        <input id="cantidadConvertir" type="number" class="validate" onfocus="helpTextAppear()" onblur="helpTextDissappear()">
+                        <input id="cantidadConvertir" type="number" class="validate" onfocus="helpTextAppear()"
+                            onblur="helpTextDissappear()">
                         <label for="textWeight">Kg o Lb</label>
 
                     </div>
@@ -67,17 +68,51 @@
 
 
 
+            <td>
+
+                <img id="draggableImg" src="magician.jpg" width="150" height="150" draggable="true"
+                    ondragstart="drag(event)">
+                <div id="dropTarget" ondrop="drop(event)" ondragover="dropAllow(event)">
+                    Pon el mago aqui
+                </div>
+            </td>
+            <!-- onmouseover="textDissapear()" onmouseout="textAppear()"-->
+
+
+            <tr>
+                <td>
+
+                    <img src="https://www.energy.gov/sites/prod/files/styles/borealis_photo_gallery_large_respondmedium/public/turn_off_lights_19916160.jpg?itok=HM7rBNFb"
+                        onmouseover="textDissapear()" onmouseout="textAppear()" width="200" height="250">
+
+                </td>
+
+
+
+            </tr>
         </table>
-
-        <img src="magician.jpg" width="150" height="150" onmouseover="textDissapear()" onmouseout="textAppear()">
-
-
 
 
 
         <div id="watermark">
             <p>Soy Watermark</p>
         </div>
+
+        <h3>Preguntas a responder</h3>
+        
+        <h4>¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</h4>
+        <p>Static no es afectado por las propiedades de top, bottom left o right.</p>
+        <p>Relative es afectado por todas las propiedades y será movida de su posición original. Ningún elemente puede ser movido al espacio que el elemento dejo abierto.</p>
+        <p>Fixed es relativo a la vista del usuario. Esto se significa que, aunque scrolleas la página el elemento siempre estará en una cierta posición.</p>
+        <p>Absolute significa que está posicionado de acuerdo con el elemento más cercano que no sea static. Si no hay ningún elemento se base en la posición del documento en sí.</p>
+        <p>Sticky es basado en que lugar del scroll esta el usuario.</p>
+        
+        <h4>¿Cuáles son los valores estándar para la propiedad visibility?</h4>
+        <p>Visible, hidden y collapse.</p>
+
+        <h4>¿Qué es el zIndex y para qué sirve?</h4>
+        <p>zIndex especifica el orden de visibilidad si hay varios elementos en la misma posición x y y.</p>
+
     </div>
     <script type="text/javascript" src="functions.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
