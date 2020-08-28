@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Lab 6</title>
+
+</head>
+
+<body>
+    <div id="hide">
+        <h2 id="vHead">Lab 6</h2>
+        <table class="centered">
+            <tr>
+                <td>
+
+                    <span id="v0">Introduzca la cantidad a convertir:</span>
+                    <div class="input-field inline">
+                        <input id="cantidadConvertir" type="number" class="validate" onfocus="helpTextAppear()" onblur="helpTextDissappear()">
+                        <label for="textWeight">Kg o Lb</label>
+
+                    </div>
+                    <button class="btn waves-effect waves-light" type="Submit" name="action"
+                        onclick="convertidorLibraKilo()">Convertir
+                        <i class="material-icons right"></i>
+                    </button>
+                    <div id="help">
+                        <p>Escribe una cantidad en numeros: Ej: "50","20.5" o "10"</p>
+
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <p id="v1">Selecciona a que unidad convertir:</p>
+                    <form action="#">
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" id="kilo" />
+                                <span id="v2">Kilo</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" id="libra" />
+                                <span id="v3">Libra</span>
+                            </label>
+                        </p>
+
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="resultado">Unidad convertida: 0</a>
+
+
+                </td>
+            </tr>
+
+
+
+
+        </table>
+
+        <img src="magician.jpg" width="150" height="150" onmouseover="textDissapear()" onmouseout="textAppear()">
+
+
+
+
+
+        <div id="watermark">
+            <p>Soy Watermark</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="functions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
