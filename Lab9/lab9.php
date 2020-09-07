@@ -90,6 +90,7 @@
 }?>
 
 <!DOCTYPE html>
+<html lang = "es">
 
 <head>
     <title>Lab 9</title>
@@ -117,9 +118,9 @@
 <h2>Tabla de Cuadrados de 50<h2>
     <?php cuadrado(50) ?>
 
-<h2>Invertidor de numeros<h2>
+<h2>Invertidor de números<h2>
     <form action="lab9.php" method="get">
-        Numero: <input type="text" name="num" value="0">
+        Número: <input type="text" name="num" value="0">
         <input type="submit">
     </form>
     <?php if(isset($_GET["num"])) 
@@ -140,6 +141,20 @@
     
     ?>
 
+<h2>Cuestionario</h2>
 
+<h4>¿Qué hace la función phpinfo()? Describe y discute 3 datos que llamen tu atención.</h4>
+<p>Phpinfo() es una función que te regresa todos tipos de datos sobre php en tu servidor. </p>
+<p>INFO_LICENSE te regresa datos sobre la licencia en la que php está distribuida.</p>
+<p>INFO_MODULES te regresa todos las extensiones y sus configuraciones correspondientes.</p>
+<p>INFO_CREDITS te da los créditos de toda la gente que ha trabajado en php y sus apis.</p>
+
+<h4>¿Qué cambios tendrías que hacer en la configuración del servidor para que pudiera ser apto en un ambiente de producción?</h4>
+<p>Tienes que asegurarte que tu servidor tenga un interpretador de PHP para poder recibir líneas de código en php.</p>
+
+<h4>¿Cómo es que si el código está en un archivo con código html que se despliega del lado del cliente, se ejecuta del lado del servidor? Explica.</h4>
+<p>Cuando el servidor detecta que hay un archivo .php o un tag de php lo manda al interpretador de PHP para que corra el código y el servidor te manda los “resultados” que saco a correr ese código de php. </p>
+
+<p></p>
 </body>
 </html>
