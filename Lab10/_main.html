@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Lab 10</title>
+</head>
+
+<body>
+    
+
+   <h2>Preguntas</h2>
+   <h4>¿Por qué es una buena práctica separar el controlador de la vista?</h4>
+   <p>Es buena idea separar el controlador y la vista para que tu código sea mas legible y manejable cuando tienes que arreglar o agregar algo.   </p>
+   
+   <h4>Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?</h4>
+   <p>$GLOBALS - Referencia a todas las variables globales</p>
+   <p>$_SERVER Información del servidor y ambiente de ejecución </p>
+   <p>$_FILES Variable de Subida de archivos HTTP</p>
+   <p>$_SESSION Variable de la sesión </p>
+   <p>$_ENV Variable del ambiente </p>
+   <p>$_COOKIE Cookies HTTP</p>
+   <h4>Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención.</h4>
+    <p>Uniqid() Es una función que regresa un numero de ID basado en el tiempo.</p>
+    <p>Array_unique() Toma un arreglo y regresa un arreglo sin valores duplicados. </p>
+   <h4>¿Qué es XSS y cómo se puede prevenir?</h4> 
+   <p>XSS es Cross Site Scripting. Se introduce un script a través de cualquier input en un sitio y corre un script. Se puede prevenir "limpiando" los inputs que recibe la página.</p>
+   
+   <h2>Lab 10</h2>
+    <div class="row">
+        <form id="passForm" action="lab10.php" method="POST" class="col s12">
+            <b>Esto es un comparador de contraseñas que checa que sean iguales y seguras.
+                Asegúrate de que tengan por lo menos 6 caracteres, un número, una letra minúscula y una letra mayúscula.
+            </b>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Ejemplo123" id="password1" type="password" class="validate" name="p1">
+                    <label for="password1">Contraseña</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Ejemplo123" id="password2" type="password" class="validate" name="p2">
+                    <label for="password2">Verificar Contraseña</label>
+                </div>
+            </div>
+            <div class="row">
+                <input class="btn waves-effect waves-light" type="submit" name="action">
+                <button class="btn waves-effect waves-light" type="Submit" name="action" onclick="clearForm()">Clear</button>
+            </div>
+        </form>
+    
+    </div>
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="functions.js"></script>
+</body>
+
+</html>
