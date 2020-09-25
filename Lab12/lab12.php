@@ -40,6 +40,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Check if file already exists
 if (file_exists($target_file)) {
   echo "Ya existe esta imagen. ";
+  $_SESSION["imgDir"] = $target_file;
   $uploadOk = 0;
 }
 
