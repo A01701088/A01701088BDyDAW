@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="foundation.css">
+    <title>Lab 12 - A01701088</title>
+</head>
+
+<body>
+
+
+    <h1>Lab 12 - A01701088</h1>
+    <div class="large-6 medium-6 cell">
+        <div class="primary callout">
+            <h2>Preguntas</h2>
+            <h4>¿Por qué es importante hacer un session_unset() y luego un session_destroy()?</h4>
+            <p>Unset destruye las variables y destroy borra la sesión. Si haces un destroy sin un unset las variables de
+                sesión todavía van a tener valores. </p>
+            <h4>¿Cuál es la diferencia entre una variable de sesión y una cookie?</h4>
+            <p>La sesión esta guardada en el servidor, los cookies en el navegador del usuario.</p>
+            <h4>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el
+                sistema de archivos cuando sube una foto con el mismo nombre?</h4>
+            <p>Si usan php puede usar una función llamada file_exists() para determinar si la existe el archivo.</p>
+            <h4>¿Qué es CSRF y cómo puede prevenirse?</h4>
+            <p>Es Cross Site Request Forgery. Es cuando un usuario autenticado corre codigo que otro usuario malicioso
+                le hizo correrlo sin que ellos supieran. Esto puede ser algo innocente como forzar que el usuario se
+                desconecte de su cuenta a quitarle dinero de su cuenta bancaria. </p>
+            <p>La forma más fácil de prevenir CSRF es tener generar un cookie cada vez que un usuario se meta a una
+                página como una manera de autenticación.</p>
+        </div>
+    </div>
+    
+    <div class="large-6 medium-6 cell">
+
+        <div class="primary callout">
+            <h3>Manejo de sesión y archivo</h3>
+            <h5>Sube una imagen y ponle un titulo</h5>
+            <form id="f1" action="lab12.php" method="POST" enctype="multipart/form-data">
+                Selecciona tu imagen:
+                <input href="#" class="button" type="file" name="fileToUpload" id="fileToUpload">
+                <input type="text" placeholder="Pon el titulo de tu imagen aqui" name="imgName">
+                <input class="alert button" type="submit" value="Subir Nombre y Imagen" name="submit" />
+            </form>
+
+
+            <a href="lab12-2.php"><button class="success button" onclick="clearForm()">Ver tu imagen y salir de
+                    sesion</button></a>
+
+
+
+
+
+        </div>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
