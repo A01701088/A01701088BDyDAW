@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="foundation.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 15</title>
+</head>
+<body>
+    
+    <form id="f1" action="vegetal.php" method="POST" enctype="multipart/form-data">
+        Ingresa los datos de tu nuevo vegetal:
+        <input type="text" placeholder="Nombre de Vegetal" name="vegName">
+        <input type="text" placeholder="Cantidad de Vegetal" name="vegC">
+        <input type="text" placeholder="Precio del Vegetal" name="vegPrice">
+        <input class="alert button" type="submit" value="Subir datos" name="submit">
+    </form>
+
+    <form id="f2" action="vegetal.php" method="POST" enctype="multipart/form-data">
+        Ingresa el nombre del vegetal que quieres borrar:
+        <input type="text" placeholder="Nombre de Vegetal" name="vegNameD">
+        <input class="alert button" type="submit" value="Borrar Dato" name="submit2">
+    </form>
+
+    <form id="f1" action="vegetal.php" method="POST" enctype="multipart/form-data">
+        Ingresa el nombre del vegetal que quieres actualizar y sus nuevos datos:
+        <input type="text" placeholder="Nombre Original del vegetal" name="vegNO">
+        <input type="text" placeholder="Nuevo Nombre" name="vegNN">
+        <input type="text" placeholder="Nuevo Cantidad" name="vegCN">
+        <input type="text" placeholder="Nuevo Precio" name="vegPN">
+        <input class="alert button" type="submit" value="Subir datos" name="submit3">
+    </form>
+
+    <div class="large-6 medium-6 cell">
+
+        <div class="primary callout">
+            <h1>Preguntas</h1>
+            <b>¿Por qué es una buena práctica separar el modelo del controlador?</b>
+            <p>Es buena idea separar el model del controlador para tener mejor mantenibilidad si tienes que cambiar algo relacionado a la base de datos.</p>
+
+            <b>¿Qué es SQL injection y cómo se puede prevenir?</b>
+            <p>SQL injection es inyectar consultas de SQL a una forma y se puede prevenir con mysqli_prepare que prepara la consulta para que no puedan meter otra consulta complete en el string.</p>
+        
+    </div>
+    </div>
+
+</body>
+</html>
