@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="foundation.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 18</title>
+</head>
+<body>
+    <br>
+    <input id="tableButton" class="alert button" type="submit" value="Mostrar Tabla(Ajax)" name="submit" onclick="sendRequest()">
+   
+    <div id ="ajaxResponse"></div>
+    
+    <form id="f1" action="vegetal.php" method="POST">
+        Ingresa los datos de tu nuevo vegetal:
+        <input type="text" placeholder="Nombre de Vegetal" name="vegName">
+        <input type="text" placeholder="Cantidad de Vegetal" name="vegC">
+        <input type="text" placeholder="Precio del Vegetal" name="vegPrice">
+        <input class="alert button" type="submit" value="Subir datos" name="submit">
+    </form>
+
+
+
+    <form id="f2" action="vegetal.php" method="POST">
+        Ingresa el nombre del vegetal que quieres borrar:
+        <input type="text" placeholder="Nombre de Vegetal" name="vegNameD">
+        <input class="alert button" type="submit" value="Borrar Dato" name="submit2">
+    </form>
+    <br>
+    
+    <form id="f3" action="vegetal.php" method="POST">
+        Ingresa el nombre del vegetal que quieres actualizar y sus nuevos datos:
+        <input type="text" id="vegNO" placeholder="Nombre Original del vegetal" name="vegNO">
+        
+        <input type="text" placeholder="Nuevo Nombre" name="vegNN">
+        <input type="text" placeholder="Nuevo Cantidad" name="vegCN">
+        <input type="text" placeholder="Nuevo Precio" name="vegPN">
+        <input class="alert button" type="submit" value="Subir datos" name="submit3">
+       
+    </form>
+
+    <div class="large-6 medium-6 cell">
+
+        <div class="primary callout">
+            <h1>Preguntas</h1>
+            <h3>¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications?</h3>
+            <p>Poder hacer requests al servidor sin tener que recargar la página permite crear aplicaciones web de alto nivel que son agradables para el usuario.</p>
+            <h3>¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?</h3>
+            <p>AJAX manda solicitudes HTTP y por lo tanto se deben de hacer validaciones en el servidor y cliente ya que no puedes dejar que un cliente mande solicitudes al servidor sin verificarlos. </p>
+            <h3>¿Qué es JSON?</h3>
+            <p>Es Javascript Object Notation. Es una manera de transportar informacion del servidor al cliente y que es legible y ligero.</p>
+            <a href="w3schools.com">Referencia: w3schools</a>
+            
+        
+    </div>
+    </div>
+    <script type="text/javascript" src="ajax.js"></script>
+
+</body>
+</html>
