@@ -1,0 +1,23 @@
+¿Qué hace el primer bloque del código (bloque del IF)?
+
+Checa si existe el procedure de creaMaterial y si si existe lo elimina para crear uno nuevo.
+
+¿Para qué sirve la instrucción GO?
+
+Interpreta el siguente comando como una utilidad de sistema y ya no como una sentencia de SQL puro.
+
+¿Explica que recibe como parámetro este Procedimiento y qué tabla modifica?
+
+Recible los parametros que determinas con un @ y los mete a la tabla de Materiales.
+
+¿Qué ventajas tienen el utilizar Stored Procedures en una aplicación cliente-servidor?
+
+Es más simple y seguro usar un stored procedure ya que nada más tienes que mandarle el comando ya creado y no el cliente no puede interferir con otras
+tablas.
+
+¿Qué ventajas tiene utilizar SP en un proyecto?
+
+Una vez que defines todos los SP que vaz a usar en tu proyecto es fácil de interactuar con tu base de datos y en tu código ya no queda con líneas enormes
+de comandos de SQL.
+
+//Como comentario adicional quiero mencionar que la tabla de materiales no tiene una columna de impuesto y por eso esta omitido en los comandos.
