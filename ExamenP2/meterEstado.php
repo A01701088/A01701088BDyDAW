@@ -1,14 +1,10 @@
 <?php
-
-require_once('util.php');
-
-
-$result = getZombi();
+require_once "util.php";
+$resultE = getEstado();
 //Imprimir Tabla Completa
-
 echo '<div class="large-6 medium-6 cell">';
 echo '<div class="primary callout">';
-echo "<h3>Tabla de Zombies</h3>";
+echo "<h3>Tabla de Estados</h3>";
 
 //Crear Tabla
     
@@ -16,18 +12,19 @@ echo "<h3>Tabla de Zombies</h3>";
     echo "<thead>";
     echo "<tr>";
     echo "<th> ID </th>";
-    echo "<th> Nombre </th>";
-
+    echo "<th> Estado </th>";
+    echo "<th> Fecha y Hora </th>";
     echo "</tr>";
     echo "</thead>";
     echo "<tbody>";
 
-if(mysqli_num_rows($result) > 0){
+if(mysqli_num_rows($resultE) > 0){
         
-    while($row = mysqli_fetch_assoc($result)){
+    while($row = mysqli_fetch_assoc($resultE)){
         echo "<tr>";
-        echo "<td>" . $row["ID_Zombie"] . "</td>";
-        echo "<td>" . $row["NomZombie"] . "</td>";
+        echo "<td>" . $row["IDZombie"] . "</td>";
+        echo "<td>" . $row["Estado"] . "</td>";
+        echo "<td>" . $row["FechaHora"] . "</td>";
 
 
         echo "</tr>";
@@ -40,4 +37,6 @@ if(mysqli_num_rows($result) > 0){
     echo "</table>";
     echo "</div>";
     echo "</div>";
+
 ?>
+    

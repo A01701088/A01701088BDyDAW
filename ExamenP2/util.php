@@ -34,23 +34,40 @@ function getZombi(){
 }
 
 
-function addZombie($nomZombie){
+// function addZombie($nomZombie){
 
+//     $con=dBC();
+//     $sql = "INSERT INTO ZombisID (NomZombie) VALUES (\"".$nomZombie."\");";
+
+//     if(mysqli_query($con, $sql)){
+//         echo "Nuevo dato ingresado correctamente";
+//         closeDB($con);
+//         return true;
+//     }
+//     else{
+//         echo "Error : " . $sql ." ". mysqli_error($con);
+//         closeDB($con);
+//         return false;
+//     }
+//     closeDB($con);
+
+// }
+
+function addZombie($nomZombie){
     $con=dBC();
-    $sql = "INSERT INTO ZombisID (NomZombie) VALUES (\"".$nomZombie."\");";
+    $sql="CALL creaZombie('$nomZombie');";
 
     if(mysqli_query($con, $sql)){
-        echo "Nuevo dato ingresado correctamente";
-        closeDB($con);
-        return true;
-    }
-    else{
-        echo "Error : " . $sql ." ". mysqli_error($con);
-        closeDB($con);
-        return false;
-    }
-    closeDB($con);
-
+                 echo "Nuevo dato ingresado correctamente";
+                 closeDB($con);
+                 return true;
+             }
+         else{
+         echo "Error : " . $sql ." ". mysqli_error($con);
+         closeDB($con);
+         return false;
+     }
+     closeDB($con);
 }
 function getEstado(){
 
@@ -63,22 +80,59 @@ function getEstado(){
     return $result;
 
 }
-function addEstado($idZombie, $estado){
+// function addEstado($idZombie, $estado){
 
-    $con=dBC();
-    $sql = "INSERT INTO ZombisIDEstado(Estado, IDZombie) VALUES (\"".$estado."\",\"". $idZombie ."\");";;
+//     $con=dBC();
+//     $sql = "INSERT INTO ZombisIDEstado(Estado, IDZombie) VALUES (\"".$estado."\",\"". $idZombie ."\");";
 
-    if(mysqli_query($con, $sql)){
+//     if(mysqli_query($con, $sql)){
+//         echo "Nuevo dato ingresado correctamente";
+        
+//         closeDB($con);
+//         return true;
+//     }
+//     else{
+//         echo "Error : " . $sql ." ". mysqli_error($con);
+//         closeDB($con);
+//         return false;
+//     }
+//     closeDB($con);
+
+// }
+
+ function addEstado($idZombie, $estado){
+
+     $con=dBC();
+     $sql = "Call creaZombieEstado('$estado','$idZombie');";
+
+     if(mysqli_query($con, $sql)){
         echo "Nuevo dato ingresado correctamente";
+        
         closeDB($con);
         return true;
-    }
+   }
     else{
         echo "Error : " . $sql ." ". mysqli_error($con);
         closeDB($con);
         return false;
-    }
+     }
+     closeDB($con);
+
+ }
+
+
+ 
+
+ function conEstado($estado){
+
+    $con=dBC();
+    $sql = "SELECT IDZombie, Estado FROM ZombisIDEstado WHERE Estado ='$estado'";
+    $result = mysqli_query($con, $sql);
+    
+
     closeDB($con);
+
+    return $result;
 
 }
 

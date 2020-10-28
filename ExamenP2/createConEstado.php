@@ -1,14 +1,14 @@
 <?php
-
+session_start();
 require_once('util.php');
+$estado=$_SESSION["estado"];
 
-
-$result = getZombi();
+$result = conEstado($estado);
 //Imprimir Tabla Completa
 
 echo '<div class="large-6 medium-6 cell">';
 echo '<div class="primary callout">';
-echo "<h3>Tabla de Zombies</h3>";
+echo "<h3>Tabla Consultas Estado</h3>";
 
 //Crear Tabla
     
@@ -26,8 +26,8 @@ if(mysqli_num_rows($result) > 0){
         
     while($row = mysqli_fetch_assoc($result)){
         echo "<tr>";
-        echo "<td>" . $row["ID_Zombie"] . "</td>";
-        echo "<td>" . $row["NomZombie"] . "</td>";
+        echo "<td>" . $row["IDZombie"] . "</td>";
+        echo "<td>" . $row["Estado"] . "</td>";
 
 
         echo "</tr>";
